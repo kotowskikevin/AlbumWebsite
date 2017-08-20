@@ -1,8 +1,20 @@
 body {
     background-color: lightgrey
 }
-
 h1 {
     background-color: black
     color: white
+}
+h2 {
+    font-family:'Franklin Gothic Medium';
+}
+div {
+    background-image: url(https://upload.wikimedia.org/wikipedia/en/6/69/Rohnert_Park.jpg);
+    background-attachment: scroll;
+    height: 300px; width: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+ul {
+    font-style: italic;
 }
