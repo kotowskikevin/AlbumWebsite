@@ -18,3 +18,21 @@ div {
 ul {
     font-style: italic;
 }
+
+a {
+    text-decoration: none;
+}
+a:link {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+    background-color: lightpink;
+}
+thead {
+    background-color: lightcyan;
+}
+tbody {
+    background-color: lightpink;
+    font-style: italic;
+}
