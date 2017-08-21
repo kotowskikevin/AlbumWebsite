@@ -2,6 +2,11 @@
 <html>
     <head>
         <title>Album Website</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <style>
         h1 {
             background-color: black
@@ -9,12 +14,19 @@
         h2 {
             font-family:'Franklin Gothic Medium';
         }
-        div {
+        .albumImage1 {
             background-image: url(https://upload.wikimedia.org/wikipedia/en/6/69/Rohnert_Park.jpg);
             background-attachment: scroll;
             height: 300px; width: 300px;
             background-position: center;
             background-repeat: no-repeat;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .albumImage2 {
+            height: 300px; width: 300px;
+            margin-left: auto;
+            margin-right: auto;
         }
         ul {
             font-style: italic;
@@ -29,6 +41,9 @@
             text-decoration: underline;
             background-color: lightpink;
         }
+        table, th, td {
+            text-align: center;
+        }
         thead {
             background-color: lightcyan;
         }
@@ -36,25 +51,29 @@
             background-color: lightpink;
             font-style: italic;
         }
+        tbody td:nth-child(even) {
+            background-color: lightblue;
+        }
     </style>
     </head>
     <body>
-        <center>
-        <div>
+        <div class="albumImage2">
+            <img src="https://upload.wikimedia.org/wikipedia/en/6/69/Rohnert_Park.jpg" class="img-circle" class="img-responsive">
         </div>
-        <h1 style="color:white">Rohnert Park</h1>
-        <h2><a href="http://ceremonyhc.com/" target="_blank">Ceremony</a></h2>
-        <h3>8 June 2010</h3>
-            <p>
+        <div style="text-align: center;">
+            <h1 style="color:white" text-align="center;">Rohnert Park</h1>
+            <h2><a href="http://ceremonyhc.com/" target="_blank">Ceremony</a></h2>
+            <h3>8 June 2010</h3>
+                <p>
                     Rohnert Park is the third studio album by 
                     San Francisco Bay Area hardcore punk band Ceremony. 
                     Named after the band's hometown in Rohnert Park, 
                     California, the 13-track LP is their first 
                     full-length release after a series of high-profile 
                     tours, including their March 2009 tour with Converge 
-                    and January 2010 tour with A.F.I
-            </p>
-        </center>
+                    and January 2010 tour with A.F.I.
+                </p>
+        </div>
     <hr>
     <center><h2>Band Members and Producers</h2></center>
     <ul>
@@ -65,82 +84,85 @@
         <li>Jake Casarotti - drums</li>
         <li>Recorded, mixed, produced by Dan Rathbun</li>
     </ul>
-    <table border="1;" width="100%;">
-        <caption><h3>Tracks</h3></caption>
-        <thead>
-        <tr>
-            <th>Track #</th>
-            <th>Track Title</th>
-            <th>Track Length</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td align="center">1</td>
-            <td align="center">"Into the Wayside Part I/Sick"</td>
-            <td align="center">4:02</td>
-        </tr>
-        <tr>
-            <td align="center">2</td>
-            <td align="center">"M.C.D.F."</td>
-            <td align="center">1:52</td>
-        </tr>
-        <tr>
-            <td align="center">3</td>
-            <td align="center">"Moving Principle"</td>
-            <td align="center">2:33</td>
-        </tr>
-        <tr>
-            <td align="center">4</td>
-            <td align="center">"The Doldrums (Friendly City)"</td>
-            <td align="center">3:02</td>
-        </tr>
-        <tr>
-            <td align="center">5</td>
-            <td align="center">"Open Head"</td>
-            <td align="center">2:08</td>
-        </tr>
-        <tr>
-            <td align="center">6</td>
-            <td align="center">"Into the Wayside Part II"</td>
-            <td align="center">3:31</td>
-        </tr>
-        <tr>
-            <td align="center">7</td>
-            <td align="center">"Terminal Addiction"</td>
-            <td align="center">1:46</td>
-        </tr>
-        <tr>
-            <td align="center">8</td>
-            <td align="center">"Don't Touch Me"</td>
-            <td align="center">2:13</td>
-        </tr>
-        <tr>
-            <td align="center">9</td>
-            <td align="center">"Back in '84"</td>
-            <td align="center">1:15</td>
-        </tr>
-        <tr>
-            <td align="center">10</td>
-            <td align="center">"All the Time"</td>
-            <td align="center">1:22</td>
-        </tr>
-        <tr>
-            <td align="center">11</td>
-            <td align="center">"The Pathos"</td>
-            <td align="center">1:22</td>
-        </tr>
-        <tr>
-            <td align="center">12</td>
-            <td align="center">"Nigh to Life"</td>
-            <td align="center">1:10</td>
-        </tr>
-        <tr>
-            <td align="center">13</td>
-            <td align="center">"Into the Wayside Part III"</td>
-            <td align="center">9:28</td>
-        </tr>
-        </tbody>
-    </table>
+    <div class="container">
+        <div>
+            <table border="1;" width="100%;">
+                <caption><h3>Tracks</h3></caption>
+                <thead>
+                <tr>
+                    <th>Track #</th>
+                    <th>Track Title</th>
+                    <th>Track Length</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td align="center">1</td>
+                    <td align="center">"Into the Wayside Part I/Sick"</td>
+                    <td align="center">4:02</td>
+                </tr>
+                <tr>
+                    <td align="center">2</td>
+                    <td align="center">"M.C.D.F."</td>
+                    <td align="center">1:52</td>
+                </tr>
+                <tr>
+                    <td align="center">3</td>
+                    <td align="center">"Moving Principle"</td>
+                    <td align="center">2:33</td>
+                </tr>
+                <tr>
+                    <td align="center">4</td>
+                    <td align="center">"The Doldrums (Friendly City)"</td>
+                    <td align="center">3:02</td>
+                </tr>
+                <tr>
+                    <td align="center">5</td>
+                    <td align="center">"Open Head"</td>
+                    <td align="center">2:08</td>
+                </tr>
+                <tr>
+                    <td align="center">6</td>
+                    <td align="center">"Into the Wayside Part II"</td>
+                    <td align="center">3:31</td>
+                </tr>
+                <tr>
+                    <td align="center">7</td>
+                    <td align="center">"Terminal Addiction"</td>
+                    <td align="center">1:46</td>
+                </tr>
+                <tr>
+                    <td align="center">8</td>
+                    <td align="center">"Don't Touch Me"</td>
+                    <td align="center">2:13</td>
+                </tr>
+                <tr>
+                    <td align="center">9</td>
+                    <td align="center">"Back in '84"</td>
+                    <td align="center">1:15</td>
+                </tr>
+                <tr>
+                    <td align="center">10</td>
+                    <td align="center">"All the Time"</td>
+                    <td align="center">1:22</td>
+                </tr>
+                <tr>
+                    <td align="center">11</td>
+                    <td align="center">"The Pathos"</td>
+                    <td align="center">1:22</td>
+                </tr>
+                <tr>
+                    <td align="center">12</td>
+                    <td align="center">"Nigh to Life"</td>
+                    <td align="center">1:10</td>
+                </tr>
+                <tr>
+                    <td align="center">13</td>
+                    <td align="center">"Into the Wayside Part III"</td>
+                    <td align="center">9:28</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
     </body>
 </html>
